@@ -7,17 +7,15 @@ const copyPhoneNumberBtnElement = document.getElementById("copy-phone-number");
 const navBtnElement = document.getElementById("nav-button");
 const navBarElement = document.getElementById("nav-bar");
 
-const skillsSectionSvg1 = document.getElementById("svg-html");
-const skillsSectionSvg2 = document.getElementById("svg-css");
-const skillsSectionSvg3 = document.getElementById("svg-javascript");
-const skillsSectionSvg4 = document.getElementById("svg-react");
+// const skillsSectionSvg1 = document.getElementById("svg-html");
+// const skillsSectionSvg2 = document.getElementById("svg-css");
+// const skillsSectionSvg3 = document.getElementById("svg-javascript");
+// const skillsSectionSvg4 = document.getElementById("svg-react");
 
-const skillsSectionItemText1 = document.querySelector("#skills-item1-text p")
-const skillsSectionItemText2 = document.querySelector("#skills-item2-text p")
-const skillsSectionItemText3 = document.querySelector("#skills-item3-text p")
-const skillsSectionItemText4 = document.querySelector("#skills-item4-text p")
+const skillsSectionTextElements = document.querySelectorAll(".skill-text");
 
-const skillsSectionItemTextList = [skillsSectionItemText1, skillsSectionItemText2, skillsSectionItemText3, skillsSectionItemText4]
+
+
 let navBarVisibility = false;
 
 function copyEmailToClipboard () {
@@ -43,12 +41,12 @@ function copyPhoneNumberToClipboard () {
     
 function showInfo(event) {
     selectedSkillSectionItemNumber = event.target.dataset.item;
-    skillsSectionItemTextList[selectedSkillSectionItemNumber -1].style.display = "block";
+    skillsSectionTextElements[selectedSkillSectionItemNumber -1].style.display = "block";
 }
 
 function removeInfo(event) {
     selectedSkillSectionItemNumber = event.target.dataset.item;
-    skillsSectionItemTextList[selectedSkillSectionItemNumber -1].style.display = "none";
+    skillsSectionTextElements[selectedSkillSectionItemNumber -1].style.display = "none";
 }
 
 function navBarVisibilityToggle() {
@@ -60,8 +58,6 @@ function navBarVisibilityToggle() {
         navBarVisibility = false;
     }
 }
-
-skillsSectionSvg1.addEventListener("mouseenter", showInfo);
 
 // projectDisplaySquareElement.addEventListener("mouseenter", switchProjectDisplayImage);
 // projectDisplaySquareElement.addEventListener("mouseleave", switchBackProjectDisplayImage);
