@@ -224,41 +224,58 @@ main {
     right: 0;
     margin: auto;
     padding: 0;
-    display: flex;
-    justify-content: center; */
+    display: flex;*/
+    align-items: center; 
+    text-align: center;
+    justify-content: center;
     top: 35vh;
     list-style: none;
     padding-top: 3rem;
-    height: 500px;
+    /* height: 500px; */
+    display: grid;
+    grid-template-columns: repeat(4, 225px);
+    grid-template-rows: 250px 200px;
+
 }
 
-@media (max-width: 850px) {
-.section-intro {
-    padding: 5rem 2rem;
+#skills-item1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    padding: auto;
 }
 
-.section-content {
-    margin: 0;
-    padding: 0;
+#skills-item1-text {
+    grid-column: 1/4;
+    grid-row: 2;
 }
-    #skills-section ul {
-        flex-direction: column;
-        padding: 0 auto;
-    }
 
-    #skills-section li {
-        min-height: 20vh;
-    }
+#skills-item2 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+}
+
+#skills-item2-text {
+    grid-column: 2/4;
+    grid-row: 2;
+}
+
+#skills-item3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#skills-item3-text {
+    grid-column: 3/4;
+    grid-row: 2;
 }
 
 #skills-section li {
-padding: 0;
-margin: 0 1.5rem;
+padding: 0 auto;
 text-align: center;
+height: 200px;
 max-width: 200px;
 min-width: 200px;
-justify-content: center;
-/* box-sizing: border-box; */
+box-sizing: border-box;
 }
 
 #skills-section li h3 {
@@ -268,15 +285,12 @@ font-size: 1.4rem;
 #skills-section svg {
     height: 155px;
     width: 155px;
-    opacity: 0.6;
+     opacity: 0.6;
     transition: opacity 0.4s ease;
 }
-
-
 #skills-section svg:hover {
     opacity: 1;
 }
-
 
 #skills-section li p {
     box-sizing: border-box;
@@ -295,19 +309,41 @@ font-size: 1.4rem;
     height: 100%;
 }
 
+
+/* @media (max-width: 850px) {
+.section-intro {
+    padding: 5rem 2rem;
+}
+
+.section-content {
+    margin: 0;
+    padding: 0;
+}
+    #skills-section ul {
+        flex-direction: column;
+        padding: 0 auto;
+    }
+
+    #skills-section li {
+        min-height: 20vh;
+    }
+} */
+
+
 #projects-section {
     margin: 0;
+    background-color: red;
     /* background-image: linear-gradient(var(--background-dark), 80%, var(--off-black)); */
     background-image: linear-gradient(rgb(79, 196, 133), #e66465);
 }
 
-#project-grid ul {
+ #project-grid ul {
+    /*background-color: red; */
     margin-top: 3rem;
     list-style: none; 
  }
 
 #project-grid li {
-    /* background-color: red; */
     position: relative;
     padding: 0;
     border-radius: 8px;

@@ -1,6 +1,5 @@
 // const projectDisplaySquareElement = document.getElementById("xs-and-os");
 const skillsSectionSvgElements = document.querySelectorAll(".svg-skills-section");
-const skillsSectionH3Elements = document.querySelectorAll("#skills-section li h3");
 const myEmailAddressh3Element = document.getElementById("email-address");
 const copyEmailBtnElement = document.getElementById("copy-email-adress");
 const myPhoneNumberh3Element = document.getElementById("phone-number");
@@ -8,6 +7,17 @@ const copyPhoneNumberBtnElement = document.getElementById("copy-phone-number");
 const navBtnElement = document.getElementById("nav-button");
 const navBarElement = document.getElementById("nav-bar");
 
+const skillsSectionSvg1 = document.getElementById("svg-html");
+const skillsSectionSvg2 = document.getElementById("svg-css");
+const skillsSectionSvg3 = document.getElementById("svg-javascript");
+const skillsSectionSvg4 = document.getElementById("svg-react");
+
+const skillsSectionItemText1 = document.querySelector("#skills-item1-text p")
+const skillsSectionItemText2 = document.querySelector("#skills-item2-text p")
+const skillsSectionItemText3 = document.querySelector("#skills-item3-text p")
+const skillsSectionItemText4 = document.querySelector("#skills-item4-text p")
+
+const skillsSectionItemTextList = [skillsSectionItemText1, skillsSectionItemText2, skillsSectionItemText3, skillsSectionItemText4]
 let navBarVisibility = false;
 
 function copyEmailToClipboard () {
@@ -32,11 +42,13 @@ function copyPhoneNumberToClipboard () {
 
     
 function showInfo(event) {
-    event.target.parentNode.children[2].style.display ="inline-block";
+    selectedSkillSectionItemNumber = event.target.dataset.item;
+    skillsSectionItemTextList[selectedSkillSectionItemNumber -1].style.display = "block";
 }
 
 function removeInfo(event) {
-    event.target.parentNode.children[2].style.display ="none";
+    selectedSkillSectionItemNumber = event.target.dataset.item;
+    skillsSectionItemTextList[selectedSkillSectionItemNumber -1].style.display = "none";
 }
 
 function navBarVisibilityToggle() {
@@ -49,8 +61,12 @@ function navBarVisibilityToggle() {
     }
 }
 
+skillsSectionSvg1.addEventListener("mouseenter", showInfo);
+
 // projectDisplaySquareElement.addEventListener("mouseenter", switchProjectDisplayImage);
 // projectDisplaySquareElement.addEventListener("mouseleave", switchBackProjectDisplayImage);
+
+
 
 for (let skillsSectionSvgElement of skillsSectionSvgElements) {
         skillsSectionSvgElement.addEventListener("mouseenter", showInfo);
