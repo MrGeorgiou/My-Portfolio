@@ -323,7 +323,7 @@ font-size: 1.4rem;
     margin: 0;
     /* background-image: linear-gradient(var(--background-dark), 80%, var(--off-black)); */
     background-image: linear-gradient(rgb(79, 196, 133), #e66465);
-    min-height: 820px;
+    min-height: 585px;
 }
 
  #project-grid ul {
@@ -445,7 +445,7 @@ font-size: 1.4rem;
 #contact-info {
     background-image: linear-gradient(rgb(176, 196, 43), purple);
     position: relative;
-    min-height: 700px;
+    min-height: 650px;
 }
 
 #contact-grid {
