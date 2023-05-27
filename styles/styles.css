@@ -160,6 +160,13 @@ main {
     text-align: center;
 }
 
+.section-intro {
+    margin: 0;
+    text-align: center;
+    padding: 14rem 3rem 0 3rem;
+}
+
+
 .section-content {
     position: absolute;
     top: 30vh;
@@ -207,11 +214,6 @@ h1 {
     min-height: 980px;
 }
 
-.section-intro {
-    margin: 0;
-    text-align: center;
-    padding: 14rem 3rem 0 3rem;
-}
 
 
 #skills-section ul{
@@ -320,6 +322,7 @@ font-size: 1.4rem;
     margin: 0;
     /* background-image: linear-gradient(var(--background-dark), 80%, var(--off-black)); */
     background-image: linear-gradient(rgb(79, 196, 133), #e66465);
+    min-height: 820px;
 }
 
  #project-grid ul {
@@ -714,12 +717,12 @@ footer p {
 
 }  
 
-/* @media (max-height: 1000px) {
-    .section-intro {
-        padding: 2rem;
+@media (max-height: 850px) {
+    #projects-section .section-intro {
+        padding: 8rem 3rem 0 3rem;
     }
 
-} */
+}
 
 @media (min-width: 851px) {
     #contact-info {
