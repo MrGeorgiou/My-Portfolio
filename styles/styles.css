@@ -153,6 +153,7 @@ header {
 main {
     margin-bottom: 0;
 }
+
 .section {
     position: relative;
     height: 100vh;
@@ -163,7 +164,7 @@ main {
 .section-intro {
     margin: 0;
     text-align: center;
-    padding: 14rem 3rem 0 3rem;
+    padding: 12vh 3rem 0 3rem;
 }
 
 
@@ -369,20 +370,16 @@ font-size: 1.4rem;
 
 #about-me {
     background-image: linear-gradient(#e66465, rgb(176, 196, 43));
+    min-height: 575px;
 }
 
-#about-me .section-intro {
-    font-size: 2rem;
-    padding: 10rem 0 3rem 0;
-}
 
 #about-me .section-content {
     position: absolute;
     height: 50%;
     display: flex;
-  justify-content: center;
-  align-items: center;
-    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
     top: 20vh;
     bottom: 20vh;
 }
@@ -428,7 +425,7 @@ font-size: 1.4rem;
 
 
 #about-me p {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -448,19 +445,17 @@ font-size: 1.4rem;
 #contact-info {
     background-image: linear-gradient(rgb(176, 196, 43), purple);
     position: relative;
-    min-height: 618px;
+    min-height: 700px;
 }
 
 #contact-grid {
     display: grid;
-    grid-template-columns: 150px 200px 120px;
-    grid-template-rows: repeat(4, 175px);
+    grid-template-columns: 130px 200px 120px;
+    grid-template-rows: repeat(4, 135px);
     list-style: none;
     margin: 0 auto;
     text-align: center;
     padding: 0;
-    margin-top: 8rem;
-    top: 20vh;
 }
 
 #contact-grid li {
@@ -474,10 +469,10 @@ font-size: 1.4rem;
 }
 
 #contact-grid .large-svg {
-    max-width: 110px;
-    min-width: 110px;
-    max-height: 110px;
-    min-height: 110px;
+    max-width: 85px;
+    min-width: 85px;
+    max-height: 85px;
+    min-height: 85px;
     margin: auto;
 }
 
@@ -488,10 +483,10 @@ font-size: 1.4rem;
 } */
 
 #contact-grid .large-svg-alt {
-    max-width: 90px;
-    min-width: 90px;
-    max-height: 90px;
-    min-height: 90px;
+    max-width: 65px;
+    min-width: 65px;
+    max-height: 65px;
+    min-height: 65px;
     margin: auto;
 }
 
@@ -561,13 +556,13 @@ footer p {
     .section-intro {
         margin: 0;
         text-align: center;
-        margin: 0rem 1rem 2rem 1rem;
+        margin: 0rem 1rem 5vh 1rem;
         padding: 1rem;
     }
 
     .section-content {
         position: relative;
-        top: 0;
+        top: 0vh;
     }
 
 
@@ -667,7 +662,7 @@ footer p {
 
     #about-me .section-intro {
         font-size: 1.3rem;
-        padding: 1rem;
+        padding: 10vh 1rem 1rem 1rem;
     }
 
     #about-me p {
@@ -684,13 +679,13 @@ footer p {
         font-weight: bold;
     }
 
+    /* #contact-info {
+        max-height: 750px;
+    } */
 
     #contact-grid {
-        position: relative;
-        grid-template-columns:80px 165px 70px;
+        grid-template-columns: 80px 165px 70px;
         grid-template-rows: repeat(4, 100px);
-        margin-top: 0rem;
-        top: 0;
     }
     
     #contact-grid h3 {
@@ -717,12 +712,12 @@ footer p {
 
 }  
 
-@media (max-height: 850px) {
+/* @media (max-height: 850px) {
     #projects-section .section-intro {
         padding: 8rem 3rem 0 3rem;
     }
 
-}
+} */
 
 @media (min-width: 851px) {
     #contact-info {
