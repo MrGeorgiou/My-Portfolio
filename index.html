@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,19 +22,22 @@
     <header>
       <nav>
         <div id="nav-button">
-          <div id="nav-line"></div>
-          <div id="nav-line"></div>
-          <div id="nav-line"></div>
+          <div class="nav-line"></div>
+          <div class="nav-line"></div>
+          <div class="nav-line"></div>
         </div>
       </nav>
     </header>
+
     <main>
-      <ul id="nav-bar">
-        <li><a href="#skills-section">Skills</a></li>
-        <li><a href="#projects-section">Projects</a></li>
-        <li><a href="#about-me">About-me</a></li>
-        <li><a href="#contact-info">Contact-info</a></li>
-      </ul>
+      <aside>
+        <ul id="nav-bar">
+          <li><a href="#skills-section">Skills</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#about-me">About-me</a></li>
+          <li><a href="#contact-info">Contact-info</a></li>
+        </ul>
+      </aside>
 
       <div class="section" id="landing">
         <div id="welcome-text" class="section-content">
@@ -45,7 +46,7 @@
           <h2>to my Project-portfolio!</h2>
         </div>
       </div>
-      
+
       <div class="section" id="skills-section">
         <h3 class="section-intro" id="skills-intro-text">
           These are the skills I have acquired so far on my Software-development
@@ -53,10 +54,10 @@
         </h3>
 
         <ul id="skills-grid" class="section-content">
-          <li id="skills-item1" >
-            <svg data-item="1"
+          <li id="skills-item1">
+            <svg
+              data-item="1"
               class="svg-skills-section"
-              id="svg-html"
               fill="none"
               height="2500"
               width="2183"
@@ -84,12 +85,11 @@
               structure of web pages.
             </p>
           </li>
-          
 
-          <li id="skills-item2" >
-            <svg data-item="2"
+          <li id="skills-item2">
+            <svg
+              data-item="2"
               class="svg-skills-section"
-              id="svg-css"
               fill="none"
               height="2500"
               width="2183"
@@ -111,16 +111,16 @@
             </svg>
             <h3>CSS</h3>
           </li>
-            <li id="skills-item2-text">
-              <p class="skill-text">
+          <li id="skills-item2-text">
+            <p class="skill-text">
               Cascading Style Sheets, describes how HTML elements are to be
               displayed on screen.
-              </p>
-            </li>
+            </p>
+          </li>
 
-          <li id="skills-item3" >
-            <svg data-item="3"
-            id="svg-javascript"
+          <li id="skills-item3">
+            <svg
+              data-item="3"
               class="svg-skills-section"
               width="800px"
               height="800px"
@@ -129,9 +129,6 @@
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
             >
-              <title>javascript [#155]</title>
-              <desc>Created with Sketch.</desc>
-              <defs></defs>
               <g
                 id="Page-1"
                 stroke="none"
@@ -162,9 +159,9 @@
             </p>
           </li>
 
-          <li id="skills-item4" >
-            <svg data-item="4"
-            id="svg-react"
+          <li id="skills-item4">
+            <svg
+              data-item="4"
               class="svg-skills-section"
               height="2500"
               viewBox="175.7 78 490.6 436.9"
@@ -179,8 +176,8 @@
               </g>
             </svg>
             <h3>React (pending)</h3>
-            </li>
-            <li id="skills-item4-text">
+          </li>
+          <li id="skills-item4-text">
             <p class="skill-text">
               React.js is an open-source JavaScript framework and library, It’s
               used for building interactive user interfaces and web
@@ -191,21 +188,24 @@
       </div>
 
       <div class="section" id="projects-section">
-        <h3 class="section-intro">And these are the projects I have created:</h3>
-          <ul id="project-grid" class="section-content">
-            <li id="xs-and-os">
-              <a href="/project-folder/Xs & Os/index.html">
-                <img id="xs-and-os-image" src="/images/Xs & Os-4.png" />
-                <h3>Xs & Os</h3>
-                <p>
-                  This project uses HTML, CSS, and JavaScript to make a fully
-                  functional game of Xs & Os, everything is handled by the
-                  browser. It also has a light-mode/dark-mode theme selector.
-                </p>
-              </a>
-            </li>
-          </ul>
+        <h3 class="section-intro">
+          And these are the projects I have created:
+        </h3>
+        <ul id="project-grid" class="section-content">
+          <li id="xs-and-os">
+            <a href="/project-folder/Xs & Os/index.html">
+              <img id="xs-and-os-image" src="/images/Xs & Os-1.png" />
+              <h3>Xs & Os</h3>
+              <p>
+                This project uses HTML, CSS, and JavaScript to make a fully
+                functional game of Xs & Os, everything is handled by the
+                browser. It also has a light-mode/dark-mode theme selector.
+              </p>
+            </a>
+          </li>
+        </ul>
       </div>
+
       <div class="section" id="about-me">
         <h3 class="section-intro">A little about me:</h3>
         <div class="section-content">
@@ -223,7 +223,6 @@
               d="M16.417 9.583A7.917 7.917 0 1 1 8.5 1.666a7.917 7.917 0 0 1 7.917 7.917zm-8.758.15a3.333 3.333 0 0 0-.362-2.507 2.543 2.543 0 0 0-.908-.851 2.504 2.504 0 0 0-1.364-.278 2.259 2.259 0 0 0-1.297 3.99 2.23 2.23 0 0 0 2.515.211 3.335 3.335 0 0 1-1.655 1.403 3.942 3.942 0 0 1-.485.164 1.84 1.84 0 0 0-.445.128.567.567 0 0 0 .32 1.059 2.496 2.496 0 0 0 .5-.113 5.2 5.2 0 0 0 .475-.161A4.37 4.37 0 0 0 7.57 10.07q.053-.167.09-.337zm6.34 0a3.331 3.331 0 0 0-.362-2.507 2.54 2.54 0 0 0-.908-.851 2.502 2.502 0 0 0-1.364-.278 2.259 2.259 0 0 0-1.297 3.99 2.229 2.229 0 0 0 2.515.211 3.334 3.334 0 0 1-1.654 1.403 3.96 3.96 0 0 1-.486.164 1.847 1.847 0 0 0-.445.128.568.568 0 0 0 .32 1.059 2.496 2.496 0 0 0 .5-.113q.241-.07.475-.161a4.37 4.37 0 0 0 2.617-2.708q.052-.167.089-.337z"
             />
           </svg>
-          
           <p>
             I am an aspiring software-developer. I am self-taught but hope to
             formalise my education in the near-future. I have been using online
@@ -315,7 +314,6 @@
               <rect x="0" y="0" width="36" height="36" fill-opacity="0" />
             </svg>
           </li>
-
           <li>
             <svg
               class="large-svg-alt"
@@ -387,7 +385,6 @@
               <rect x="0" y="0" width="36" height="36" fill-opacity="0" />
             </svg>
           </li>
-
           <li>
             <svg
               class="large-svg"
@@ -433,9 +430,10 @@
                       d="M24,24H0v-8h2v6h20v-6h2V24z M12,18.4l-7.7-7.7l1.4-1.4l5.3,5.3V0h2v14.6l5.3-5.3l1.4,1.4L12,18.4z"
                     />
                   </g>
-                </g></svg></a>
+                </g>
+              </svg>
+            </a>
           </li>
-
           <li>
             <svg
               class="large-svg"
