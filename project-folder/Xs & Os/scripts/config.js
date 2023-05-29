@@ -40,8 +40,10 @@ function updateTheme() {
 function switchTheme() {
  if (currentTheme === 1) {
     currentTheme++;
+    themeNameElement.textContent = "(Light-mode)";
  } else {
     currentTheme--;
+    themeNameElement.textContent = "(Dark-mode)";
  }
 
   updateTheme();

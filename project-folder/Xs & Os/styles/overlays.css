@@ -28,21 +28,6 @@ aside.theme-2 {
   animation-name: pulse-theme-2;
 }
 
-
-@keyframes pulse-theme-2 {
-  0% {
-    box-shadow: 0 2px 8px black;
-  }
-
-  50% {
-    box-shadow: 0 1px 1px black;
-  }
-
-  100% {
-    box-shadow: 0 2px 8px black;
-  }
-}
-
 #backdrop {
   position: fixed;
   top: 0;

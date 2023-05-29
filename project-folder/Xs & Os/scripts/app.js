@@ -22,6 +22,7 @@ let currentRound = 0;
 let gameIsOver = false;
 
 const toggleThemeBtnElement = document.getElementById("toggle-button");
+const themeNameElement = document.getElementById("current-theme-name");
 const mainHeaderElement = document.getElementById("main-header");
 const bodyElement = document.querySelector("body");;
 const gameConfigListItems = document.querySelectorAll("#game-config li");

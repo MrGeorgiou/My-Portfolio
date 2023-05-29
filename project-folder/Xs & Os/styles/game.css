@@ -9,13 +9,9 @@
   max-width: 36rem;
   margin: auto;
   padding: 1rem 2rem;
-  /* background-color: black;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5); */
   border-radius: 4px;
   text-align: center;
   display: none;
-  /* animation-name: pulse; */
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   margin-bottom: 3rem;
@@ -32,20 +28,6 @@
   background-color: var(--off-white);
   border: 1px solid black;
   animation-name: pulse-theme-2;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
-  }
-
-  50% {
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
-  }
-
-  100% {
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
-  }
 }
 
 #game-over h2 {
@@ -78,7 +60,6 @@
 }
 
 #game-board li {
-  
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -113,6 +94,34 @@ background-color: var(--background-dark-secondary);
   color: white;
   background-color: var(--background-dark-secondary);
   cursor: default;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes pulse-theme-2 {
+  0% {
+    box-shadow: 0 2px 8px black;
+  }
+
+  50% {
+    box-shadow: 0 1px 1px black;
+  }
+
+  100% {
+    box-shadow: 0 2px 8px black;
+  }
 }
 
 @media (max-width: 350px) {
