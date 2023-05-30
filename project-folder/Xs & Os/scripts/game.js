@@ -1,8 +1,7 @@
 function closeEmptyFieldErrorMessage() {
   backdropOverlayElement.style.display = "none";
-  emptyFieldErrorElement.style.display = "none"
+  emptyFieldErrorElement.style.display = "none";
 }
-
 
 function updatePlayerName() {
   activePlayerNameElement.textContent = players[activePlayer].name;
@@ -23,11 +22,11 @@ function resetGameStatus() {
       gameBoardIndex++;
     }
   }
-  
+
   gameOverElement.firstElementChild.innerHTML =
     'You won <span id="winner-name">PLAYER NAME</span>!';
   gameOverElement.style.display = "none";
-  turnIndicatorElement.style.display = "block"
+  turnIndicatorElement.style.display = "block";
 }
 
 function startNewGame() {
@@ -42,7 +41,6 @@ function startNewGame() {
   updatePlayerName();
 
   gameAreaElement.style.display = "block";
-
 }
 
 function switchPlayer() {
@@ -72,7 +70,6 @@ function selectGameField(event) {
 
   selectedFieldElement.textContent = players[activePlayer].symbol;
   selectedFieldElement.classList.add("disabled");
-
   gameData[selectedRow][selectedColumn] = activePlayer + 1;
 
   currentRound++;
@@ -85,7 +82,6 @@ function selectGameField(event) {
   }
 
   switchPlayer();
-  
 }
 
 function checkForGameOver() {
@@ -141,13 +137,12 @@ function endGame(winnerId) {
 
   if (winnerId > 0) {
     const winnerName = players[winnerId - 1].name;
-    gameOverElement.firstElementChild.firstElementChild.textContent = winnerName;
+    gameOverElement.firstElementChild.firstElementChild.textContent =
+      winnerName;
   } else {
     gameOverElement.firstElementChild.innerHTML = "It's a draw!";
   }
 
   turnIndicatorElement.style.display = "none";
-  gameOverElement.style.display = "block"
-
+  gameOverElement.style.display = "block";
 }
-

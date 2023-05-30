@@ -1,31 +1,14 @@
 function updateTheme() {
-
-// for (let themeElement of themeElements) {
-//   themeElement.className = "theme-" + currentTheme;
-  
-// }
-// for (let h3ConfigElement of h3ConfigElements) {
-//   h3ConfigElement.className = "theme-" + currentTheme;
-// }
-
-// for (let gameConfigListItem of gameConfigListItems) {
-//   gameConfigListItem.className = "theme-" + currentTheme;
-// }
-
-// for (let button of buttons) {
-//   button.className = "theme-" + currentTheme;
-// }
-
   for (let altButton of altButtons) {
     altButton.className = "alt-theme-" + currentTheme;
   }
 
   for (let i = 0; i < 4; i++) {
-    for ( let themecomponent of themeComponentsByGroup[i]) {
+    for (let themecomponent of themeComponentsByGroup[i]) {
       themecomponent.className = "theme-" + currentTheme;
     }
   }
- 
+
   for (let gameFieldIndividualSquare of gameFieldIndividualSquares) {
     if (currentTheme === 1) {
       gameFieldIndividualSquare.classList.remove("theme-2");
@@ -38,18 +21,16 @@ function updateTheme() {
 }
 
 function switchTheme() {
- if (currentTheme === 1) {
+  if (currentTheme === 1) {
     currentTheme++;
     themeNameElement.textContent = "(Light-mode)";
- } else {
+  } else {
     currentTheme--;
     themeNameElement.textContent = "(Dark-mode)";
- }
+  }
 
   updateTheme();
 }
-
-
 
 function closeErrorMessage() {
   namingErrorElement.style.display = "none";
@@ -91,7 +72,7 @@ function savePlayerConfig(event) {
 
   players[editedPlayer - 1].name = enteredPlayerName;
 
-  updatePlayerName()
+  updatePlayerName();
 
   closePlayerConfig();
 }
