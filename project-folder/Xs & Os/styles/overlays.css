@@ -3,26 +3,23 @@ aside {
   top: 20%;
   left: 5%;
   right: 5%;
-  /* width: 90%; */
   max-width: 40rem;
   margin: 3rem auto;
   padding: 1rem;
   border-radius: 4px;
   display: none;
-   animation-duration: 1.5s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
 
 aside.theme-1 {
-  background-color: var(--nearly-black);
-  /* box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2); */
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--off-black);
+  border: 1px solid var(--transparent-white);
   animation-name: pulse;
 }
 
 aside.theme-2 {
   background-color: white;
-  /* box-shadow: 0 2px 8px black; */
   border: 1px solid black;
   color: black;
   animation-name: pulse-theme-2;
@@ -52,11 +49,9 @@ aside.theme-2 {
 }
 
 #naming-error p {
-font-weight: bold;
+  font-weight: bold;
 }
 
 #playername {
   border: 1px solid black;
 }
-
-

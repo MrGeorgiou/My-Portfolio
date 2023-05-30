@@ -19,8 +19,8 @@
 
 #game-over.theme-1 {
   background-color: black;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--transparent-white);
+  box-shadow: 0 2px 8px var(--transparent-white);
   animation-name: pulse;
 }
 
@@ -45,7 +45,7 @@
 }
 
 #active-player-name.theme-2 {
-  color: var(--background-dark-secondary);
+  color: var(--near-black);
 }
 
 #game-board {
@@ -69,15 +69,15 @@
 }
 
 #game-board li.theme-1 {
-background-color: var(--background-dark-secondary);
+  background-color: var(--near-black);
 }
 
 #game-board li.theme-2 {
-  background-color: var(--background-dark-tertiary);
-  }
+  background-color: var(--nearly-grey);
+}
 
 #game-board li.theme-1:hover {
-  background-color: var(--background-dark-tertiary);
+  background-color: var(--nearly-grey);
 }
 
 #game-board li.theme-2:hover {
@@ -92,21 +92,21 @@ background-color: var(--background-dark-secondary);
 
 #game-board li.theme-2.disabled {
   color: white;
-  background-color: var(--background-dark-secondary);
+  background-color: var(--near-black);
   cursor: default;
 }
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 8px var(--transparent-white);
   }
 
   50% {
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 1px var(--transparent-white);
   }
 
   100% {
-    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 8px var(--transparent-white);
   }
 }
 
