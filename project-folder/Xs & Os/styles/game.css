@@ -81,7 +81,7 @@ background-color: var(--background-dark-secondary);
 }
 
 #game-board li.theme-2:hover {
-  background-color: #666;
+  background-color: var(--custom-grey);
 }
 
 #game-board li.theme-1.disabled {

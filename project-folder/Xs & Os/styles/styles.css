@@ -1,14 +1,11 @@
 :root {
-  --background-dark: rgba(0, 0, 0, 0.9);
-  --background-dark-secondary: #343434;
-  --background-dark-tertiary: rgb(169, 169, 169);
+  --off-black: rgba(0, 0, 0, 0.9);
+  --near-black: #343434;
+  --nearly-grey: rgb(169, 169, 169);
   --off-white: rgb(225, 225, 225);
-  --hover-border: #666;
-  --hover-background: rgb(68, 68, 68);
-
-  --background-light: rgb(225, 225, 225);
-  --background-light-secondary: rgb(169, 169, 169);
-  --background-light-tertiary: #666;
+  --custom-grey: #666;
+  --dark-grey: rgb(68, 68, 68);
+  --transparent-white: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -20,7 +17,7 @@ body {
 
 body.theme-1 {
   color: white;
-  background-color: var(--background-dark);
+  background-color: var(--off-black);
 }
 
 body.theme-2 {
@@ -36,44 +33,39 @@ body.theme-2 {
 
 #main-header.theme-1 {
   background-color: black;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid var(--transparent-white);
 }
 
 #main-header.theme-2 {
   background-color: var(--off-white);
-  border-bottom: 1px solid var(--background-light-tertiary);
+  border-bottom: 1px solid var(--custom-grey);
 }
-
 
 #main-header h1 {
   margin: 0;
   font-size: 2.5rem;
 }
 
-
 #main-header h3 {
-    display: block;
-    margin: 1rem auto 0 auto;
-    text-align: center;
-    justify-content: center;
+  display: block;
+  margin: 1rem auto 0 auto;
+  text-align: center;
+  justify-content: center;
 }
 
 #theme-toggle {
-    padding: 0 1rem;
-    margin: 0;
-    display: flex;
-    /* border: 1px solid var(--off-white); */
-    justify-content: right;
-   
+  padding: 0 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: right;
 }
 
 #toggle-button {
-    
-    border-radius: 5px;
-    height: 10px;
-    width: 10px;
-    margin: 20.5px 0.5rem 0 0rem;
-    cursor: pointer;
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+  margin: 20.5px 0.5rem 0 0rem;
+  cursor: pointer;
 }
 
 #toggle-button.theme-1 {
@@ -81,7 +73,7 @@ body.theme-2 {
 }
 
 #toggle-button.theme-2 {
-  border: 2px solid var(--background-light-tertiary);
+  border: 2px solid var(--custom-grey);
 }
 
 #toggle-button:hover {
@@ -96,38 +88,35 @@ button {
   font: inherit;
   padding: 0.2rem 1.2rem;
   font-size: 0.9rem;
-  /* background-color: var(--background-dark);
-  border: 1px solid rgba(255, 255, 255, 0.5);*/
-  color: white; 
+  color: white;
   border-radius: 3px;
   cursor: pointer;
 }
 
 button.theme-1 {
-  background-color: var(--background-dark);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--off-black);
+  border: 1px solid var(--transparent-white);
   color: white;
 }
 
 button.theme-1:hover {
-color: white;
-  background-color: var(--hover-background);
+  color: white;
+  background-color: var(--dark-grey);
 }
 
- 
 button.theme-2 {
   background-color: var(--off-white);
-  border: 1px solid var(--background-light-tertiary);
+  border: 1px solid var(--custom-grey);
   color: black;
 }
 
 button.theme-2:hover {
   color: black;
-  background-color: var(--background-dark-tertiary)
-}/**/
+  background-color: var(--nearly-grey);
+}
 
 button.alt-theme-1 {
-background-color: inherit;
+  background-color: inherit;
   border-color: transparent;
 }
 
@@ -136,27 +125,13 @@ button.alt-theme-1:hover {
   background-color: var(--off-white);
 }
 
- button.alt-theme-2 {
+button.alt-theme-2 {
   color: black;
-  background-color: inherit;
-  border-color: transparent
-}
-
-button.alt-theme-2:hover {
-  color: white;
-  background-color: var(--background-dark-secondary);
-} /**/
-
-/* .btn:hover {
-  color: white;
-  background-color: var(--hover-background);
-} */
-
-/* .btn-alt {
   background-color: inherit;
   border-color: transparent;
 }
 
-.btn-alt:hover {
-  
-} */
+button.alt-theme-2:hover {
+  color: white;
+  background-color: var(--near-black);
+}

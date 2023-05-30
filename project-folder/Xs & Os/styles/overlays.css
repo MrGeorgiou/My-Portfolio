@@ -14,7 +14,7 @@ aside {
 }
 
 aside.theme-1 {
-  background-color: var(--background-dark);
+  background-color: var(--nearly-black);
   /* box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2); */
   border: 1px solid rgba(255, 255, 255, 0.5);
   animation-name: pulse;

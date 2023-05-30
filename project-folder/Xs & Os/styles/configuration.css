@@ -68,8 +68,8 @@
 }
 
 #game-config li.theme-2 {
-    background-color: var(--background-dark-tertiary);
-    border: 1px solid var(--background-light-tertiary);
+    background-color: var(--nearly-grey);
+    border: 1px solid var(--custom-grey);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -85,7 +85,7 @@
 }
 
 #game-config h3.theme-1 {
-    color: var(--background-dark-tertiary);
+    color: var(--nearly-grey);
 }
 
 #game-config h3.theme-2 {
