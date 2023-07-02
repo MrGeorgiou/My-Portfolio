@@ -1,6 +1,6 @@
 const navBtnElement = document.getElementById("nav-button");
 const navBarElement = document.getElementById("nav-bar");
-const skillsSectionSvgElements = document.querySelectorAll(".svg-skills-section");
+const skillsSectionSvgContainerElements = document.querySelectorAll(".svg-skills-container");
 const skillsSectionTextElements = document.querySelectorAll(".skill-text");
 const myEmailAddressh3Element = document.getElementById("email-address");
 const copyEmailBtnElement = document.getElementById("copy-email-adress");
@@ -9,7 +9,12 @@ const copyPhoneNumberBtnElement = document.getElementById("copy-phone-number");
 
 let navBarVisibility = false;
 
+let skillsSectionTextVisibilityData = [
+  0, 0, 0
+]
+
 function navBarVisibilityToggle() {
+ 
   if (!navBarVisibility) {
     navBarElement.style.display = "block";
     navBarVisibility = true;
@@ -19,17 +24,21 @@ function navBarVisibilityToggle() {
   }
 }
 
-function showInfo(event) {
-  selectedSkillSectionItemNumber = event.target.dataset.item;
-  skillsSectionTextElements[selectedSkillSectionItemNumber - 1].style.display =
-    "block";
-}
+function toggleSkillInfo(event) {
+  const selectedSkillSectionItemNumber = event.target.dataset.item;
 
-function removeInfo(event) {
-  selectedSkillSectionItemNumber = event.target.dataset.item;
-  skillsSectionTextElements[selectedSkillSectionItemNumber - 1].style.display =
-    "none";
+   if (skillsSectionTextVisibilityData[selectedSkillSectionItemNumber - 1] === 0) {
+    skillsSectionTextVisibilityData[selectedSkillSectionItemNumber - 1] = 1;
+    skillsSectionTextElements[selectedSkillSectionItemNumber - 1].style.display = "block"
+  } else {
+      skillsSectionTextVisibilityData[selectedSkillSectionItemNumber - 1] = 0;
+      skillsSectionTextElements[selectedSkillSectionItemNumber - 1].style.display = "none"
+    }
+    console.log(skillsSectionTextVisibilityData);
 }
+ 
+
+
 
 function copyEmailToClipboard() {
   const emailValue = myEmailAddressh3Element.textContent;
@@ -45,9 +54,9 @@ function copyPhoneNumberToClipboard() {
 
 navBtnElement.addEventListener("click", navBarVisibilityToggle);
 
-for (let skillsSectionSvgElement of skillsSectionSvgElements) {
-  skillsSectionSvgElement.addEventListener("mouseenter", showInfo);
-  skillsSectionSvgElement.addEventListener("mouseleave", removeInfo);
+for (let skillsSectionSvgContainerElement of skillsSectionSvgContainerElements) {
+  skillsSectionSvgContainerElement.addEventListener("click", toggleSkillInfo);
+  // skillsSectionSvgElement.addEventListener("mouseleave", removeInfo);
 }
 
 copyEmailBtnElement.addEventListener("click", copyEmailToClipboard);
