@@ -34,7 +34,6 @@ function toggleSkillInfo(event) {
       skillsSectionTextVisibilityData[selectedSkillSectionItemNumber - 1] = 0;
       skillsSectionTextElements[selectedSkillSectionItemNumber - 1].style.display = "none"
     }
-    console.log(skillsSectionTextVisibilityData);
 }
  
 
