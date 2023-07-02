@@ -479,7 +479,7 @@ footer p {
   }
 
   #skills-section ul {
-    top: 0;
+    top: 7vh;
     grid-template-columns: 160px 160px;
     grid-template-rows: repeat(3, 200px);
     grid-column-gap: 10px;
