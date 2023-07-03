@@ -6,6 +6,7 @@ const myEmailAddressh3Element = document.getElementById("email-address");
 const copyEmailBtnElement = document.getElementById("copy-email-adress");
 const myPhoneNumberh3Element = document.getElementById("phone-number");
 const copyPhoneNumberBtnElement = document.getElementById("copy-phone-number");
+const alternateDeviceSuggestion = document.getElementById("alt-device");
 
 let navBarVisibility = false;
 
@@ -37,8 +38,6 @@ function toggleSkillInfo(event) {
 }
  
 
-
-
 function copyEmailToClipboard() {
   const emailValue = myEmailAddressh3Element.textContent;
   navigator.clipboard.writeText(emailValue);
@@ -51,6 +50,19 @@ function copyPhoneNumberToClipboard() {
   alert("Phone-number copied to clipboard.");
 }
 
+function windowResized() {
+  const layoutWidth = window.innerWidth;
+  if(layoutWidth < 850) {
+    alternateDeviceSuggestion.textContent = "laptop or pc";
+  } else {
+    alternateDeviceSuggestion.textContent = "mobile-phone";
+  }
+}
+windowResized();
+window.addEventListener("resize", windowResized);
+
+
+
 navBtnElement.addEventListener("click", navBarVisibilityToggle);
 
 for (let skillsSectionSvgContainerElement of skillsSectionSvgContainerElements) {
@@ -60,3 +72,4 @@ for (let skillsSectionSvgContainerElement of skillsSectionSvgContainerElements) 
 
 copyEmailBtnElement.addEventListener("click", copyEmailToClipboard);
 copyPhoneNumberBtnElement.addEventListener("click", copyPhoneNumberToClipboard);
+
