@@ -238,14 +238,14 @@ h1 {
   font-size: 1.4rem;
 }
 
-#skills-section svg {
+.svg-skills-section {
   height: 155px;
   width: 155px;
   opacity: 0.6;
   transition: opacity 0.4s ease;
 }
 
-#skills-section svg:hover {
+.svg-skills-section:hover {
   opacity: 1;
 }
 
