@@ -36,14 +36,10 @@ function toggleSkillInfo(event) {
     
     function hoverComplex() {
       skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 0.6;
-      
     }
-
     function hoverComplex2() {
       skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 1;
-      
     }
-    
       skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].addEventListener("mouseenter", hoverComplex)
       skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].addEventListener("mouseleave", hoverComplex2)
 
@@ -54,14 +50,10 @@ function toggleSkillInfo(event) {
 
       function hoverComplex() {
         skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 1;
-        
       }
-  
       function hoverComplex2() {
         skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 0.6;
-        
       }
-      
         skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].addEventListener("mouseenter", hoverComplex)
         skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].addEventListener("mouseleave", hoverComplex2)
     }
