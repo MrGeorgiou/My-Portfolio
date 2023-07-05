@@ -28,35 +28,32 @@ function navBarVisibilityToggle() {
 
 function toggleSkillInfo(event) {
   const selectedSkillSectionItemNumber = event.target.dataset.item;
+  const skillsSectionSvgElement = skillsSectionSvgElements[selectedSkillSectionItemNumber - 1];
 
-   if (skillsSectionTextVisibilityData[selectedSkillSectionItemNumber - 1] === 0) {
+  function hoverFade() {
+    skillsSectionSvgElement.style.opacity = 0.6;
+  }
+
+  function hoverClarify() {
+    skillsSectionSvgElement.style.opacity = 1;
+  }
+
+  if (skillsSectionTextVisibilityData[selectedSkillSectionItemNumber - 1] === 0) {
     skillsSectionTextVisibilityData[selectedSkillSectionItemNumber - 1] = 1;
     skillsSectionTextElements[selectedSkillSectionItemNumber - 1].style.display = "block"
-    skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 1;
-    
-    function hoverComplex() {
-      skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 0.6;
-    }
-    function hoverComplex2() {
-      skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 1;
-    }
-      skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].addEventListener("mouseenter", hoverComplex)
-      skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].addEventListener("mouseleave", hoverComplex2)
+    skillsSectionSvgElement.style.opacity = 1;
+  
+    skillsSectionSvgElement.addEventListener("mouseenter", hoverFade)
+    skillsSectionSvgElement.addEventListener("mouseleave", hoverClarify)
 
   } else {
       skillsSectionTextVisibilityData[selectedSkillSectionItemNumber - 1] = 0;
       skillsSectionTextElements[selectedSkillSectionItemNumber - 1].style.display = "none"
-      skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 0.6;
+      skillsSectionSvgElement.style.opacity = 0.6;
 
-      function hoverComplex() {
-        skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 1;
-      }
-      function hoverComplex2() {
-        skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].style.opacity = 0.6;
-      }
-        skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].addEventListener("mouseenter", hoverComplex)
-        skillsSectionSvgElements[selectedSkillSectionItemNumber - 1].addEventListener("mouseleave", hoverComplex2)
-    }
+      skillsSectionSvgElement.addEventListener("mouseenter", hoverClarify)
+      skillsSectionSvgElement.addEventListener("mouseleave", hoverFade)
+  }
 }
  
 
