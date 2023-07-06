@@ -133,9 +133,10 @@ header {
 }
 
 .section-intro {
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   padding: 12vh 3rem 0 3rem;
+  max-width: 750px;
 }
 
 .section-content {
@@ -301,60 +302,69 @@ h1 {
 }
 
 #about-me .section-content {
-  height: 50%;
-  align-items: center;
-  top: 20vh;
-  bottom: 20vh;
+  display: grid;
+  grid-template-columns: 75px 600px 75px;
+  grid-template-rows: 75px 200px 75px;
+  grid-template-areas: 
+  "open . ."
+  "main main main"
+  ". . close";
 }
 
 #quote-mark-open {
   transform: scaleX(-1);
-  top: 5vh;
-  position: absolute;
-  left: 0;
   animation-name: slow-fade;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  grid-area: open;
+  justify-self: start;
+  align-self: start;
 }
 
 #quote-mark-closed {
-  position: absolute;
-  right: 0;
-  bottom: 5vh;
   animation-name: slow-fade;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  grid-area: close;
+  justify-self: end;
+  align-self: end;
+}
+
+#about-me p {
+  grid-area: main;
+  justify-self: center;
+  align-self: center;
+}
+
+.quote-mark {
+  max-height: 75px;
+  max-width: 75px;
+  min-height: 75px;
+  min-width: 75px;
+  opacity: 0.6;
+}
+
+#about-me p {
+  grid-area: main;
+  justify-self: center;
+  align-self: center;
+  padding: 1rem;
+  
+  max-width: 800px;
+  max-height: 400px;
+  z-index: 1;
 }
 
 @keyframes slow-fade {
   0% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
   50% {
     opacity: 0;
   }
   100% {
-    opacity: 0.4;
+    opacity: 0.6;
   }
-}
-
-.quote-mark {
-  max-height: 150px;
-  max-width: 150px;
-  min-height: 150px;
-  min-width: 150px;
-  opacity: 0.4;
-}
-
-#about-me p {
-  position: absolute;
-  margin: auto;
-  padding: 1rem;
-  left: 0;
-  right: 0;
-  max-width: 800px;
-  max-height: 400px;
-  z-index: 1;
 }
 
 #contact-info {
@@ -563,16 +573,11 @@ footer p {
     padding: 10vh 1rem 1rem 1rem;
   }
 
-  #about-me p {
-    position: relative;
-    display: block;
-    margin: auto;
-    left: 0;
-    right: 0;
-    max-width: 800px;
-    max-height: 400px;
-    text-align: center;
-    font-weight: bold;
+  #about-me .section-content {
+    display: grid;
+    grid-template-columns: 75px 60vw 75px;
+    grid-template-rows: 75px minmax(0, 250px) 75px;
+    grid-template-areas: 
   }
 
   #contact-info {
@@ -610,5 +615,13 @@ footer p {
 @media (min-width: 851px) {
   #contact-info {
     min-height: 1050px;
+  }
+}
+
+@media (max-width: 400px) {
+  #about-me .section-content {
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: 20vw 40vh 20vw;
   }
 }
