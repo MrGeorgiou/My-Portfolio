@@ -577,7 +577,6 @@ footer p {
     display: grid;
     grid-template-columns: 75px 60vw 75px;
     grid-template-rows: 75px minmax(0, 250px) 75px;
-    grid-template-areas: 
   }
 
   #contact-info {
