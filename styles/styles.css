@@ -372,17 +372,20 @@ h1 {
   min-height: 650px;
 }
 
-#contact-grid {
-  display: grid;
-  grid-template-columns: 130px 200px 120px;
-  grid-template-rows: repeat(4, 135px);
+#contact-list {
+  display: block;
 }
 
-#contact-grid li {
-  display: inline-grid;
+#contact-list li a{
+  display: flex;
+  justify-content: center;
 }
 
-#contact-grid h3 {
+#contact-list li img {
+  height: 50px;
+}
+
+/* #contact-grid h3 {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -432,7 +435,7 @@ h1 {
 
 #contact-grid li a {
   display: flex;
-}
+} */
 
 footer {
   background-color: purple;
