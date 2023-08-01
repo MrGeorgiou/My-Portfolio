@@ -374,11 +374,13 @@ h1 {
 
 #contact-list {
   display: block;
+ max-width: 300px;
 }
 
 #contact-list li a{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 #contact-list li img {
