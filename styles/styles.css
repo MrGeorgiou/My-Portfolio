@@ -146,9 +146,10 @@ header {
   left: 0;
   right: 0;
   margin: auto;
-  padding: 0;
+  padding: 0 1rem;
   display: flex;
   justify-content: center;
+  max-width: 750px;
 }
 
 #landing {
@@ -374,17 +375,18 @@ h1 {
 
 #contact-list {
   display: block;
- max-width: 300px;
+ max-width: 250px;
 }
 
 #contact-list li a{
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
+  align-items: center;
 }
 
 #contact-list li img {
-  height: 50px;
+  height: 2rem;
 }
 
 /* #contact-grid h3 {
@@ -438,6 +440,29 @@ h1 {
 #contact-grid li a {
   display: flex;
 } */
+
+#goodbye {
+  height: 150px;
+  position: absolute;
+  left: calc(50% - 75px);
+  right: calc(50% - 75px);
+  top: 75vh;
+  animation-name: wave;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotateZ(-10deg)
+  }
+  50% {
+    transform: rotateZ(70deg)
+  }
+  100% {
+    transform: rotateZ(-10deg)
+  }
+}
 
 footer {
   background-color: purple;
@@ -496,7 +521,7 @@ footer p {
   #skills-section ul {
     top: 7vh;
     grid-template-columns: 160px 160px;
-    grid-template-rows: repeat(3, 200px);
+    grid-template-rows: repeat(3, 230px);
     grid-column-gap: 10px;
     max-width: 350px;
   }
@@ -542,7 +567,7 @@ footer p {
   } */
 
   #skills-section li {
-    margin: auto;
+    margin: 2rem auto;
     max-width: 160px;
     min-width: 160px;
   }
@@ -613,6 +638,10 @@ footer p {
     max-height: 45px;
     min-height: 45px;
     margin: auto;
+  }
+
+  #goodbye {
+    top: 50vh;
   }
 }
 
