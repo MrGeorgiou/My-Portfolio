@@ -443,10 +443,10 @@ h1 {
 } */
 
 #goodbye {
-  height: 150px;
+  height: 250px;
   position: absolute;
-  left: calc(50% - 75px);
-  right: calc(50% - 75px);
+  left: calc(50% - 125px);
+  right: calc(50% - 125px);
   top: 75vh;
   animation-name: wave;
   animation-duration: 6s;
@@ -643,6 +643,9 @@ footer p {
 
   #goodbye {
     top: 50vh;
+    height: 150px;
+    left: calc(50% - 75px);
+    right: calc(50% - 75px);
   }
 }
 
