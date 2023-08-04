@@ -1,5 +1,6 @@
 :root {
   --off-white: rgb(225, 225, 225);
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -16,6 +17,10 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 255, 255);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -155,6 +160,7 @@ header {
 
 #landing {
   background-image: linear-gradient(#e66465, #9198e5);
+  height: 200vh;
 }
 
 h2 {
