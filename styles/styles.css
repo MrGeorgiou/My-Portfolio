@@ -21,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -160,7 +162,7 @@ header {
 
 #landing {
   background-image: linear-gradient(#e66465, #9198e5);
-  height: 200vh;
+  height: 180vh;
   background-attachment: fixed;
 }
 
