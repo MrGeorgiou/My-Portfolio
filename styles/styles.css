@@ -161,7 +161,8 @@ header {
 }
 
 #landing {
-  background-image: linear-gradient(black, black);
+  background-image: url(..\images\svgs\other\black.svg);
+  background-color: black;
   min-height: 100vh;
   max-height: none;
   height: 180vh;
