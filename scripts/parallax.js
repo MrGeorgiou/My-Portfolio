@@ -41,6 +41,7 @@ const lightGreyTree10 = document.getElementById("light-grey-tree-10");
 const lightGreyTree11 = document.getElementById("light-grey-tree-11");
 const lightGreyTree12 = document.getElementById("light-grey-tree-12");
 const welcomeSign = document.getElementById("welcome-sign");
+const sky = document.getElementById("sky");
 
 const landing = document.querySelector("#landing.section");
 const parallaxWoods = document.getElementById("parallax-woods");
@@ -80,7 +81,7 @@ function parallaxEffect() {
     blackGround.style.top = value * 1 + "px";
 
     
-
+    sky.style.top  = value * 1 + "px";
     blackTree1.style.top = value * 1 + "px";
     blackTree3.style.top = value * 1 + "px";
     blackTree1.style.left = value * -0.18 + "px";
