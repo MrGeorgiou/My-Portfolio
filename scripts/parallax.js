@@ -42,16 +42,33 @@ const lightGreyTree11 = document.getElementById("light-grey-tree-11");
 const lightGreyTree12 = document.getElementById("light-grey-tree-12");
 const welcomeSign = document.getElementById("welcome-sign");
 
-const landing = document.getElementById("landing");
+const landing = document.querySelector("#landing.section");
 const parallaxWoods = document.getElementById("parallax-woods");
+const halfWindowInnerHeight = window.innerHeight / 2;
+const oneAndHalfWindowInnerHeight = window.innerHeight * 1.5;
 
-
+function landingResize() {
+if (window.innerWidth > oneAndHalfWindowInnerHeight) {
+    landing.style.height = 250 + "vh";
+} else if(window.innerWidth > window.innerHeight && window.innerWidth <= oneAndHalfWindowInnerHeight) {
+    landing.style.height = 170 + "vh";
+} else if (window.innerWidth <= window.innerHeight && window.innerWidth > halfWindowInnerHeight) {
+    landing.style.height = 150 + "vh";
+} else if (window.innerWidth < halfWindowInnerHeight) {
+    landing.style.height = 100 + "vh";
+}
+}
 
 function parallaxEffect() {
     const parallaxWoodsWidth = parallaxWoods.offsetWidth
-    const stopParallaxDynamicValue = ((parallaxWoodsWidth / 100) * 70)
+    const windowInnerWidthSeventyPercent = ((window.innerWidth / 100) * 70)
+    const windowInnerWidthFortyPercent = (window.innerWidth / 2.5);
 
-    if (window.scrollY > stopParallaxDynamicValue) {
+    if(window.innerWidth > oneAndHalfWindowInnerHeight && window.scrollY > windowInnerWidthFortyPercent) {
+        return
+    }
+
+    if (window.scrollY > windowInnerWidthSeventyPercent) {
         return
     }
 
@@ -151,6 +168,11 @@ function parallaxEffect() {
     welcomeSign.style.top = value * 0.8 + "px";
 }
 
-window.addEventListener("scroll", parallaxEffect);
-window.addEventListener("resize", parallaxEffect);
+function windowResized() {
+    parallaxEffect();
+    landingResize();
+}
 
+window.addEventListener("scroll", parallaxEffect);
+window.addEventListener("resize", windowResized);
+window.onload = landingResize();

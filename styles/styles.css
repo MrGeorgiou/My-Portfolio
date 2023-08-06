@@ -162,6 +162,8 @@ header {
 
 #landing {
   background-image: linear-gradient(#e66465, #9198e5);
+  min-height: 100vh;
+  max-height: none;
   height: 180vh;
   background-attachment: fixed;
 }
