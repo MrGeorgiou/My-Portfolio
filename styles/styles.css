@@ -42,6 +42,7 @@ h3 {
 
 ul {
   list-style: none;
+  padding-inline-start: 0px;
 }
 
 body {
@@ -128,54 +129,50 @@ header {
 
 .section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   text-align: center;
+  overflow: visible;
 }
 
 .section-intro {
   margin: 0 auto;
   text-align: center;
-  padding: 12vh 3rem 0 3rem;
   max-width: 750px;
+  padding: 3rem 1rem;
 }
 
 .section-content {
-  position: absolute;
-  top: 30vh;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
   max-width: 750px;
 }
 
 #landing {
   background-image: linear-gradient(#e66465, #9198e5);
+  position: relative;
 }
 
 h2 {
   font-size: 1.5rem;
+  margin: 0;
 }
 
 h1 {
   font-size: 6rem;
-  margin: 1rem;
+  margin: 0;
 }
 
 #welcome-text {
-  top: 0;
+  padding: 40vh 1rem;
+  align-items: center;
   display: block;
   height: 245px;
   width: 75%;
+  margin: 0 auto;
 }
 
 #skills-section {
   background-image: linear-gradient(#9198e5, rgb(79, 196, 133));
-  min-height: 980px;
 }
 
 #skills-section ul {
@@ -185,6 +182,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 225px);
   grid-template-rows: 250px 200px;
+  justify-content: center;
 }
 
 #skills-item1 {
@@ -262,45 +260,8 @@ h1 {
   border: 1px solid var(--off-white);
 }
 
-#projects-section {
-  background-image: linear-gradient(rgb(79, 196, 133), #e66465);
-  min-height: 585px;
-}
-
-#project-grid li {
-  padding: 0;
-  border-radius: 8px;
-  height: 520px;
-  width: 350px;
-  margin: 0;
-  border: 2px solid rgb(214, 214, 214);
-  transition: background-color 0.5s ease-out;
-}
-
-#project-grid li:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid white;
-  cursor: pointer;
-}
-
-#project-grid li img {
-  height: 300px;
-  max-height: 300px;
-  width: auto;
-  padding: 1.5rem 1rem 1rem 1rem;
-}
-
-#project-grid li h3 {
-  margin-top: 0;
-}
-
-#project-grid li p {
-  margin: 0 1rem;
-}
-
 #about-me {
   background-image: linear-gradient(#e66465, rgb(176, 196, 43));
-  min-height: 575px;
 }
 
 #about-me .section-content {
@@ -332,10 +293,8 @@ h1 {
   align-self: end;
 }
 
-#about-me p {
-  grid-area: main;
-  justify-self: center;
-  align-self: center;
+#about-me .section-content {
+  padding: 30vh 1rem;
 }
 
 .quote-mark {
@@ -371,7 +330,6 @@ h1 {
 
 #contact-info {
   background-image: linear-gradient(rgb(176, 196, 43), purple);
-  min-height: 650px;
 }
 
 #contact-list {
@@ -649,11 +607,7 @@ footer p {
   }
 }
 
-@media (min-width: 851px) {
-  #contact-info {
-    min-height: 1050px;
-  }
-}
+
 
 @media (max-width: 400px) {
   #about-me .section-content {
