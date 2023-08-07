@@ -161,8 +161,9 @@ header {
 }
 
 #landing {
-  background-image: url(..\images\svgs\other\black.svg);
-  background-color: black;
+  background-image: url("..\images\svgs\other\red.svg");
+  width: 100%;
+  /* background-color: red; */
   min-height: 100vh;
   max-height: none;
   height: 180vh;
