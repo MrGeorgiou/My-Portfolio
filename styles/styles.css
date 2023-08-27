@@ -43,6 +43,8 @@ h3 {
 ul {
   list-style: none;
   padding-inline-start: 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
 }
 
 body {
@@ -138,7 +140,7 @@ header {
 .section-intro {
   margin: 0 auto;
   text-align: center;
-  max-width: 750px;
+  max-width: 700px;
   padding: 3rem 1rem;
 }
 
@@ -227,9 +229,8 @@ h1 {
 
 #skills-section li {
   text-align: center;
-  height: 200px;
+  max-height: 200px;
   max-width: 200px;
-  min-width: 200px;
   box-sizing: border-box;
   margin: 0 1rem;
   cursor: pointer;
@@ -240,8 +241,8 @@ h1 {
 }
 
 .svg-skills-section {
-  height: 155px;
-  width: 155px;
+  max-height: 155px;
+  max-width: 155px;
   opacity: 0.6;
   transition: opacity 0.4s ease;
 }
@@ -266,12 +267,15 @@ h1 {
 
 #about-me .section-content {
   display: grid;
-  grid-template-columns: 75px 600px 75px;
-  grid-template-rows: 75px 200px 75px;
+  grid-template-columns: min(75px, 18vw) min(600px, 58vw) min(75px, 18vw);
+  /* grid-template-rows: min(75px, 20vw) 100% min(75px, 20vw); */
   grid-template-areas: 
   "open . ."
   "main main main"
   ". . close";
+  justify-content: center;
+  padding: 30vh 1rem;
+  margin: 0 auto;
 }
 
 #quote-mark-open {
@@ -293,10 +297,6 @@ h1 {
   align-self: end;
 }
 
-#about-me .section-content {
-  padding: 30vh 1rem;
-}
-
 .quote-mark {
   max-height: 75px;
   max-width: 75px;
@@ -309,10 +309,7 @@ h1 {
   grid-area: main;
   justify-self: center;
   align-self: center;
-  padding: 1rem;
-  
-  max-width: 800px;
-  max-height: 400px;
+  padding: 0 1rem;
   z-index: 1;
 }
 
@@ -335,6 +332,7 @@ h1 {
 #contact-list {
   display: block;
  max-width: 250px;
+ width: 90vw;
 }
 
 #contact-list li a{
@@ -405,7 +403,7 @@ h1 {
   position: absolute;
   left: calc(50% - 125px);
   right: calc(50% - 125px);
-  top: 75vh;
+  top: 50vh;
   animation-name: wave;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -441,7 +439,7 @@ footer p {
 
 @media (max-width: 850px) {
   h1 {
-    font-size: 3rem;
+    font-size: min(3rem, 18vw);
   }
 
   h2 {
@@ -467,22 +465,22 @@ footer p {
     top: 0;
   }
 
-  #welcome-text {
-    margin-top: auto;
+  /* #welcome-text {
+    margin-top: auto; 
     position: absolute;
-  }
+  }*/
 
-  #skills-section svg {
-    height: 120px;
-    width: 120px;
+  .svg-skills-section {
+    width: 35vw;
   }
 
   #skills-section ul {
     top: 7vh;
-    grid-template-columns: 160px 160px;
-    grid-template-rows: repeat(3, 230px);
-    grid-column-gap: 10px;
+    grid-template-columns: repeat(2, min(40vw, 200px));
+    grid-template-rows: repeat(3, min(75vw, 230px));
+    grid-column-gap: min(10vw, 100px);
     max-width: 350px;
+    padding: 0 5vw;
   }
 
   #skills-item1 {
@@ -527,8 +525,7 @@ footer p {
 
   #skills-section li {
     margin: 2rem auto;
-    max-width: 160px;
-    min-width: 160px;
+    width: 40vw;
   }
 
   #skills-section li h3 {
@@ -537,24 +534,14 @@ footer p {
 
   #skills-section li p {
     font-weight: 400;
-    font-size: 1rem;
-    max-width: 155px;
-    min-width: 155px;
+    font-size: min(1rem, 5vw);
+   width: min(35vw, 250px);
     padding: 0.5rem;
   }
 
   #project-grid li {
     justify-content: center;
-    max-width: 300px;
-    min-height: 480px;
-    max-height: 480px;
-  }
-
-  #project-grid li img {
-    height: 250px;
-    max-height: 250px;
-    width: auto;
-    padding: 1rem;
+    width: min(90vw, 375px)
   }
 
   #about-me .section-intro {
@@ -562,11 +549,11 @@ footer p {
     padding: 10vh 1rem 1rem 1rem;
   }
 
-  #about-me .section-content {
+  /* #about-me .section-content {
     display: grid;
     grid-template-columns: 75px 60vw 75px;
     grid-template-rows: 75px minmax(0, 250px) 75px;
-  }
+  } */
 
   #contact-info {
     max-height: 800px;
@@ -608,11 +595,11 @@ footer p {
 }
 
 
-
+/* 
 @media (max-width: 400px) {
   #about-me .section-content {
     display: grid;
     grid-template-columns: 20vw 60vw 20vw;
     grid-template-rows: 20vw 40vh 20vw;
   }
-}
+} */
