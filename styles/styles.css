@@ -333,6 +333,7 @@ h1 {
   display: block;
  max-width: 250px;
  width: 90vw;
+ padding-bottom: 10rem;
 }
 
 #contact-list li a{
@@ -400,10 +401,7 @@ h1 {
 
 #goodbye {
   height: 250px;
-  position: absolute;
-  left: calc(50% - 125px);
-  right: calc(50% - 125px);
-  top: 50vh;
+  margin: 0 auto;
   animation-name: wave;
   animation-duration: 6s;
   animation-iteration-count: infinite;
